@@ -1,7 +1,7 @@
 You are working in a local Python repository.
 
 **Goal:**
-Fix test failures caused by an API breaking change and produce the required delivery documentation.
+Fix test failures caused by an API breaking change, produce required delivery documentation, and add a .gitignore file to exclude virtual environment directories.
 
 ---
 
@@ -13,7 +13,7 @@ Fix test failures caused by an API breaking change and produce the required deli
 2. **File modification rules:**
 
    * Allowed to modify: `client.py`
-   * Must create: `README.md`, `api_diff.md`
+   * Must create: `README.md`, `api_diff.md`, `.gitignore`
    * Must NOT modify: `test_client.py`, `run_tests`
    * **Optional: adding tests is allowed**, but only under the following constraints:
      a) New tests may only *supplement coverage* and must not bypass or replace the intent of existing tests
@@ -62,7 +62,12 @@ Fix test failures caused by an API breaking change and produce the required deli
      * Old response: JSON
      * New response: raw bytes / binary
 
-6. **After completion, output the following:**
+6. **`.gitignore` file requirements:**
+
+   * Must ignore common Python virtual environment directories: `.venv/`, `venv/`, `env/`
+   * Should include common Python artifacts: `__pycache__/`, `*.pyc`
+
+7. **After completion, output the following:**
    A) A list of files that were modified or added
    B) A concise summary of key changes (≤ 5 bullet points)
    C) If tests were added:
